@@ -18,6 +18,7 @@ func main() {
 			"card",
 		}),
 		Customer: stripe.String(os.Getenv("STRIPE_CUSTOMER")),
+		Locale:   stripe.String("ja"),
 		SubscriptionData: &stripe.CheckoutSessionSubscriptionDataParams{
 			Params: stripe.Params{
 				Context: context.Background(),

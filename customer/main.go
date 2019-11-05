@@ -19,8 +19,14 @@ func main() {
 				"custom2": "(／・ω・)／にゃー！",
 			},
 		},
-		Email: stripe.String("yukpiz@gmail.com"),
+		Email: stripe.String("yukpiz999@gmail.com"),
 	})
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("%+v\n", c)
+
+	c, err = customer.Get(c.ID, nil)
 	if err != nil {
 		panic(err)
 	}
